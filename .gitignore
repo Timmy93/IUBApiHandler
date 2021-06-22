@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#Config files
+admin_config.yml
+tester.py
+user_read_config.yml
+
