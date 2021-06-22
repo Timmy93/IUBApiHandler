@@ -220,12 +220,14 @@ class ApiHandler:
 		return self.decode(r)
 	
 	#Request the creation of the full IUB DB
+	#TODO Function not implemented on server side
 	def dumpIubDb(self):
 		req = "create_dump"
 		r = requests.post(self.apiSite+"/api.php", data = {'user':self.username, 'psw':self.token, 'req':req})
 		return self.decode(r)
 
 	#Request to refresh the premium links inside the DB taking them from the directory
+	#TODO After release of new api - Point api to api/release.php
 	def refreshPremiumLinks(self, code):
 		req = "new_1f_links"
 		r = requests.post(self.apiSite+"/api.php", data = {'user':self.username, 'psw':self.token, 'req':req, 'code':code})
